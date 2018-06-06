@@ -1,0 +1,24 @@
+{
+  "name": "ajax_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronkyl/digitalcrafts_ajax_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronkyl/digitalcrafts_ajax_api/issues"
+  },
+  "homepage": "https://github.com/aaronkyl/digitalcrafts_ajax_api#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.17.5",
+    "nunjucks": "^3.1.3"
+  }
+}
