@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/aaronkyl/digitalcrafts_ajax_api#readme",
   "dependencies": {
+    "apicache": "^1.2.1",
     "axios": "^0.18.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",

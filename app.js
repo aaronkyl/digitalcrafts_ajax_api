@@ -1,10 +1,12 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const axios = require('axios');
-require('dotenv').load();
+const apicache = require('apicache');
+const cache = apicache.middleware;
 
 var app = express();
 
+require('dotenv').load();
 nunjucks.configure('views', {
   autoescape: true,
   express: app,
@@ -17,8 +19,9 @@ app.get('/', function(req, resp) {
     resp.render('index.html', {});
 });
 
-app.get('/search', function(req, res) {
+app.get('/search', cache('5 minutes'), function(req, res) {
     var userInput = req.query.city;
+    console.log('fetching data for ', userInput);
     var api_url = 'http://api.openweathermap.org/data/2.5/weather';
     var config = {
         params: {
